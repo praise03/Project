@@ -1,0 +1,20 @@
+{
+    "header": {
+        "hash_type": "sha256",
+        "encoding": "utf_8",
+        "raw_bytes": false,
+        "security": false
+    },
+    "hashes": [
+        "23596ed4ad34a427b62bfe9789257dc8deb0204c8cf52e65448cabfca51f59b8",
+        "5659c0cc7fe58b553f4183a989e878cc6ed37a359dd291edd2ac3933591e7e90",
+        "469d1b5c5f464ca87142f088e971386dc2d2d3de569a05d9b64c8549aeea0d50",
+        "ce51fb3f3cd5ee10d3ab1a774f13f55f8f69fcc3773c0fdd1a0c1d78c3a3633a",
+        "a4961027c0c562678d5e98589587b17995cb9c98c78ebb04e33702ada7e1038c",
+        "975fa6ff737138776317cc9458391b8c549678fd2b298cabd7d48ce5a83bc8b0",
+        "8a7cb68a74f1733aae027a52fa793e3d8bf305ac27a1196e204872f7697f5eb7",
+        "8376a4ed4482481fd10bb27f59666b809f6dfabb99e49da35e842e2f7c5b106e",
+        "802baddd54c6deffc5f70de5e75f6a9c4bdad33b8afb9f2aa9816b62ea7527cb",
+        "ee2477b81a6c79303b10fd1c913a6617225c44adfcb04a9d50447a173e191f95"
+    ]
+}

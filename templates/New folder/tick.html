@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+@font-face {
+font-family: "CustomFont";
+src: url("LibreCaslonText-Bold.ttf");
+}
+@font-face {
+font-family: "signature";
+src: url("IslandMoments-Regular.ttf");
+}
+body {
+font-family: 'CustomFont', Arial, sans-serif;
+font-weight:normal;
+font-style:normal;
+text-transform: uppercase;
+}
+
+.sign{
+	font-family: 'signature', Arial, sans-serif;
+	font-weight:bolder;
+	font-style:normal;
+	color: black;
+}
+.signature, .title { 
+float:left;
+  border-top: 1px solid #000;
+  width: 200px; 
+  text-align: center;
+  color: white;
+}
+.form{ 
+  color: black;
+}
+
+.form{ 
+  background: url('frame.png');
+  background-repeat: round;
+  background-size: contain;
+  opacity: .9;
+}
+</style>
+
+</head>
+
+<body>
+
+<center class="center">
+<div class="form" style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
+	<div style="width:750px; height:550px; padding:20px; text-align:center; z-index: 99999999">
+
+
+    	<span style="font-size:40px; font-weight:bold">Certificate of Completion</span>
+	   <br><br><br>
+	   <span style="font-size:25px"><i>This is to certify that</i></span>
+	   <br><br>
+	   <span style="font-size:30px"><b><?php echo $name; ?></b></span><br/><br/>
+	   <span style="font-size:25px"><i>Matric Number</i></span> <br/><br/>
+	   <span style="font-size:30px"><?php echo $email; ?></span> <br/><br/>
+	   <span style="font-size:20px">Graduated From The department of <b> <?php echo $subject; ?> </b></span> <br/><br/><br/><br/>
+	   <span style="font-size:25px"><i>Year:</i></span>
+       		<script>
+				var today = new Date();
+				var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+				document.getElementById('dat').innerHTML = date;
+       		</script>
+       </i></span>
+		<table style="margin-top:40px;float:left;color: black;">
+		<tr><br><br><br>
+		<td><span><b class="sign"> Dr. Oladele</b></td>
+		</tr>
+		<tr>
+		<td style="width:200px;float:left;border:0;border-bottom:1px solid #000;"></td>
+		</tr>
+		<tr>
+		<td style="text-align:center"><span><b>hod</b></td>
+		</tr>
+		</table>
+		<table style="margin-top:40px;float:right;color: black;">
+		<tr>
+		<td><span><b class="sign"> Dr. Sanni Aliu</b></td>
+		</tr>
+		<tr>
+		<td style="width:200px;float:right;border:0;border-bottom:1px solid #000;"></td>
+		</tr>
+		<tr>
+		<td style="text-align:center"><span><b>Vice Chancellor</b></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		</center>
+
+
+
+<!-- <div class="trigger"></div>
+<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+<path class="circ path" style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"
+	/>
+<polyline class="tick path" style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+	11.6,20 15.9,24.2 26.4,13.8 "/>
+</svg>
+<button>go/reset</button> -->
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$("button").click(function(){
+    $(".trigger").toggleClass("drawn")
+});
+</script>
+</body>
+</html>

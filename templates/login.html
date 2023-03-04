@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}">
+    <script src="{{url_for('static', filename='clipboard.min.js')}}"></script>
+    <style>
+    @font-face {
+        font-family: "CustomFont";
+        src: url("../static/LuxuriousRoman-Regular.ttf");
+    }
+    body {
+      background-color: #fafafa;
+      color: #333333;
+      margin-top: 5rem !important;
+      font-family: 'CustomFont', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #444444;
+    }
+
+    .bg-steel {
+      background-color: #5f788a;
+      background-color: #111927;
+        background-image:
+            radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 9%),
+            radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 5%);
+    }
+
+    .site-header .navbar-nav .nav-link {
+      color: #cbd5db;
+    }
+
+    .site-header .navbar-nav .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .site-header .navbar-nav .nav-link.active {
+      font-weight: 500;
+    }
+    .login {
+      width: 360px;
+      margin: auto;
+      font-family: 'Comfortaa', cursive;
+    }
+
+    .form2 {
+      position: relative;
+      z-index: 1;
+      background: #FFFFFF;
+      border-radius: 10px;
+      max-width: 360px;
+      padding: 45px;
+      text-align: center;
+    }
+
+    .form2 input {
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      border-radius: 5px;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      font-family: 'Comfortaa', cursive;
+    }
+
+    .form2 input:focus {
+      background: #dbdbdb;
+    }
+
+    .form2 button {
+      font-family: 'Comfortaa', cursive;
+      text-transform: uppercase;
+      outline: 0;
+      background: #111927;
+      width: 100%;
+      border: 0;
+      border-radius: 5px;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+    }
+
+    .form2 button:active {
+      background: #395591;
+    }
+
+    .lock {
+      font-size: 75px;
+      color: #111927;
+      margin-bottom: 2rem;
+    }
+    .clipboard{
+        font-size: 20px;
+        color: white;
+        margin-top: .3rem;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+    .not-allowed{
+    cursor: not-allowed !important;
+    }
+    .example-target {
+        position: relative;
+        margin: 15px 0 0;
+        padding: 39px 19px 14px;
+        background-color: #fff;
+        border-radius: 4px 4px 0 0;
+        border: 1px solid #ddd;
+        z-index: 2;
+    }
+    .input-group {
+    display: table;
+}
+    .input-group input:first-child, .input-group-button:first-child .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group input, .input-group-button {
+    display: table-cell;
+}
+.input-group input {
+    position: relative;
+    width: 100%;
+}
+.form-control, input[type=text], input[type=password], input[type=email], input[type=number], input[type=tel], input[type=url], select, textarea {
+    min-height: 34px;
+    padding: 7px 8px;
+    font-size: 13px;
+    color: #333;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 8%);
+}.input-group-button {
+    vertical-align: middle;
+}
+
+.input-group input, .input-group-button {
+    display: table-cell;
+}
+.input-group-button:last-child .btn {
+    margin-left: -1px;
+}
+.input-group input:last-child, .input-group-button:last-child .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.butn {
+    position: relative;
+    display: inline-block;
+    padding: 7px 12px;
+    font-size: 2px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc,#eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+}
+.clippy {
+    margin-top: -3px;
+    position: relative;
+    top: 3px;
+}
+    </style>
+<!--    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">-->
+
+</head>
+<body>
+    <header class="site-header mb-5">
+          <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+              <a class="navbar-brand mr-4" href="{{url_for('home')}}">Cert</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                  <a class="nav-item nav-link" href="/">Upload</a>
+                  <a class="nav-item nav-link" href="/verify">Verify</a>
+                </div>
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main role="main" class="container" style="margin-top: 150px">
+      <div class="row" >
+        <div class="col-md-8">
+            <div class="alert alert-danger " id="alert" style="margin-bottom:4rem;margin-top:-80px;display:none">
+                <span id="message"></span><br>
+                <span id="counter"></span>
+            </div>
+        </div>
+      </div>
+        <div class="row">
+      	<div style="align-items: center; padding:5px;" class="col-12 mb-5" >
+
+            <div id="secret" style="display:none">
+                <h4>Your Private Key Is:</h4>
+                <div id="example-target" class="example">
+                    <div class="input-group">
+                        <input id="foo" type="text" value="{{private_key}}" readonly>
+                        <span class="input-group-button">
+                            <button class="butn" type="button" data-clipboard-demo="" data-clipboard-target="#foo">
+                                <img class="clippy" src="{{url_for('static', filename='clippy.svg')}}" width="13" alt="Copy to clipboard">
+                            </button>
+                        </span>
+                    </div>
+                </div>
+		<br>
+                <h5><a href="{{url_for('home')}}">Proceed to upload credentials -></a></h5>
+            </div>
+
+             <div class="login" id="login">
+              <div class="form2">
+                <div class="login-form">
+                  <span class="fas fa-lock lock"></span>
+                  <input id="username" type="text" placeholder="username" required />
+                  <input id="password" type="password" placeholder="password" required />
+                  <button id="submit" onclick="validate()">Sign In</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script>
+        new ClipboardJS('.butn');
+    </script>
+    <script>
+        var attempt = 3;
+        var message  = document.getElementById("message");
+
+        function onTimer() {
+            document.getElementById('counter').innerHTML = "Try again in <b>" +i+ "</b> sec(s)";
+            i--;
+            if (i < 0) {
+                document.getElementById('counter').innerHTML = "";
+            }
+            else {
+                setTimeout(onTimer, 1000);
+            }
+        }
+
+        function validate(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if ( username == "admin" && password == "admin"){
+                document.getElementById("login").style.display = 'none';
+                document.getElementById("secret").style.display = 'block';
+                {{authenticate()}}
+            }
+            else{
+                attempt --;
+                document.getElementById("alert").style.display = 'block';
+                message.innerHTML = "Authentication Failed. You have " +attempt+ " attempt(s) left;"
+                // Disabling fields after 3 attempts.
+                if( attempt == 0){
+                    document.getElementById("username").disabled = true;
+                    document.getElementById("password").disabled = true;
+                    document.getElementById("submit").disabled = true;
+                    document.getElementById("submit").classList.add('not-allowed');
+
+                    i = 60;
+                    onTimer()
+                    const myTimeout = setTimeout(count, 60000);
+
+
+                    function count() {
+                        document.getElementById("username").disabled = false;
+                        document.getElementById("password").disabled = false;
+                        document.getElementById("submit").disabled = false;
+                        document.getElementById("submit").classList.remove('not-allowed');
+                        document.getElementById("alert").style.display = 'none';
+
+                        attempt = 3
+                    }
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>

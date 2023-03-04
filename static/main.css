@@ -1,0 +1,195 @@
+@font-face {
+font-family: "CustomFont";
+src: url("LuxuriousRoman-Regular.ttf");
+}
+
+body {
+/*  background-color: #fafafa;*/
+background-color: #5f788a;
+  color: #333333;
+  margin-top: 5rem !important;
+  background-repeat: space;
+  font-family: 'CustomFont', Arial, sans-serif;
+font-weight:normal;
+font-style:normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(4, 4, 4, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+form{
+    background: #5256ad;
+  margin-top: -100px;
+  width: 1000px;
+  height: 400px;
+  border: 4px dashed #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer !important;
+
+  backdrop-filter: blur(6px) saturate(158%);
+    -webkit-backdrop-filter: blur(6px) saturate(158%);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+
+}
+
+form:hover{
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    background-color: rgba(11, 11, 11, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    color: #fff;
+}
+form p{
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial;
+}
+form input{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+}
+/*form button{
+  margin: 0;
+  color: #fff;
+  background: #16a085;
+  border: none;
+  width: 508px;
+  height: 35px;
+  margin-top: -20px;
+  margin-left: -4px;
+  border-radius: 4px;
+  border-bottom: 4px solid #117A60;
+  transition: all .2s ease;
+  outline: none;
+}
+form button:hover{
+  background: #149174;
+  color: #0C5645;
+}
+form button:active{
+  border:0;
+}*/
+.submit{
+  margin-top: 70px;
+  padding: 15px 65px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+  backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    background-color: rgba(11, 11, 11, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    color: #fff;
+
+}
+.submit:hover{
+     backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    color: black;
+}
+.icon{
+  margin-top: 100px;
+  font-size: 100px;
+  color: #fff;
+}
+form header{
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+form span{
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+.browse{
+  background: #fff !important;
+  color:  black !important;
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card {
+  position: absolute;
+  padding: 190px;
+  opacity: 100%;
+    backdrop-filter: blur(25px) saturate(190%);
+    -webkit-backdrop-filter: blur(25px) saturate(190%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+/* Background styles */
+body {
+    background-color: #111927;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 29%),
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 25%);
+}
+
+.card {
+    backdrop-filter: blur(19px) saturate(180%);
+    -webkit-backdrop-filter: blur(19px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.result>p{
+font-size: x-large;
+    color: white;
+    }
